@@ -10,16 +10,32 @@ const tinhTong = (n) => {
 tinhTong(9)
 
 //bai3:
- tich = 1;
-function tichChinh(N) {
-    for ( i = 1; i <= N; i++){
-    d= Math.sqrt(i);
-    if ( parseInt(d)== d){ 
-        console.log(i);
+var tich = 0;
+const tinhNhan = (N)=> {
+    var tich = 1;
+for ( i = 2; i <N; i++){
+    if (isPrimeNumber(i) == true){
         tich *= i;
-
     }
-} console.log(tich);
+   
 }
-tichChinh(26)
+  console.log(tich)
+ function isPrimeNumber(n) {
+    if( n <2){
+        return false;
+    }
+    d = Math.sqrt(n);
+    for ( j = 2; j <= d; j++) {
+        if (n%j == 0){
+            return false;
+        }
+    }
+    return true;
+
+   
+}
+
+}
+tinhNhan(100)
+
 
